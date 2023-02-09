@@ -9,7 +9,7 @@ import (
 type Config struct {
 	Log      LogConfig
 	API      controller.Config
-	Postgres database.PostgresConfig
+	Database database.DatabaseConfig
 	Redis    cache.RedisConfig
 }
 

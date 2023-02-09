@@ -69,9 +69,9 @@ func main() {
 	defer cancel()
 
 	logger.Info("connecting to database...",
-		zap.String("host", config.Postgres.Host),
-		zap.String("db", config.Postgres.DatabaseName))
-	db, err := database.NewPostgres(ctx, config.Postgres)
+		zap.String("host", config.Database.Host),
+		zap.String("db", config.Database.DatabaseName))
+	db, err := database.NewDB(config.Database)
 	if err != nil {
 		err = fmt.Errorf("database.NewDatabase: %w", err)
 		return

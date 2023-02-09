@@ -20,7 +20,7 @@ import (
 type ServerOpt struct {
 	Port          int
 	Logger        *zap.Logger
-	Database      *database.DB
+	Database      *database.DBC
 	Redis         *cache.Cache
 	AuditResponse bool
 }
